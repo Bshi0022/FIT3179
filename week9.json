@@ -1,34 +1,34 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Total cancer incidence by country",
+  "title": "Prevalence of Cancer (2022)",
   "width": 800,
   "height": 400,
-  "projection": {"type": "equalEarth"},
+  "projection": { "type": "equalEarth" },
   "data": {
-    "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179---Data-Visualisation/refs/heads/main/Week9homework/ne_110m_admin_0_countries.topojson",
-    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+    "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/ne_110m_admin_0_countries.topojson",
+    "format": { "type": "topojson", "feature": "ne_110m_admin_0_countries" }
   },
   "transform": [
     {
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179---Data-Visualisation/refs/heads/main/Week9homework/Overall%20global%20cancer%20incidence%20(2022).csv"
+          "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/cancer.csv"
         },
         "key": "Country",
-        "fields": ["Rate"]
+        "fields": ["Prevalence of cancer"]
       }
     }
   ],
-  "mark": {"type": "geoshape"},
+  "mark": { "type": "geoshape" },
   "encoding": {
     "color": {
-      "field": "Rate",
+      "field": "Prevalence of cancer",
       "type": "quantitative"
     },
     "tooltip": [
-      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-      {"field": "Rate", "type": "quantitative", "title": "Rate"}
+      { "field": "properties.NAME", "type": "nominal", "title": "Country" },
+      { "field": "Prevalence of cancer", "type": "quantitative" }
     ]
   }
 }
