@@ -16,19 +16,19 @@
           "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/cancer.csv"
         },
         "key": "Country",
-        "fields": ["Prevalence of cancer"]
+        "fields": ["Prevalence of obesity"]
       }
     }
   ],
   "mark": { "type": "geoshape" },
   "encoding": {
     "color": {
-      "field": "Prevalence of cancer",
+      "field": "Prevalence of obesity",
       "type": "quantitative"
     },
     "tooltip": [
       { "field": "properties.NAME", "type": "nominal", "title": "Country" },
-      { "field": "Prevalence of cancer", "type": "quantitative" }
+      { "field": "Prevalence of obesity", "type": "quantitative" }
     ]
   }
 }
