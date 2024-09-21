@@ -1,4 +1,4 @@
-Country ,Number of cancer cases,Prevalence of cancer,
+Country ,Number of cancer cases,Prevalence of cancer
 Afghanistan,24275 ,106.20,
 Albania,8019 ,160.80,
 Algeria,64713 ,141.20,
@@ -183,5 +183,4 @@ Venezuela,62947 ,184.80,
 Vietnam,180480 ,150.80,
 Yemen,16525 ,83.10,
 Zambia,15296 ,159.50,
-Zimbabwe,17725 ,208.00,
-,,,
+Zimbabwe,17725 ,208.00
