@@ -39,7 +39,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/cancer.csv"
+              "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/homeworkweek9/cancer.csv"
             },
             "key": "Country",
             "fields": ["Prevalence of cancer"]
