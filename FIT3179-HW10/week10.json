@@ -1,14 +1,14 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "height": 400,
-    "width":400,
+    "height": 1000,
+    "width":4000,
     "title": "Top 10 deaths by cancer in the world",
     "data": {
       "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/FIT3179-HW10/Cancer%20death%20by%20types%20.csv"
     },
     "encoding": {
       "y": {"field": "Cancer Type", "type": "nominal","title": "Type Of Cancer"},
-      "x": {"field": "Death cases in 2021", "type": "quantitative", "scale": {"domain": [0, 2020000]},"title": "Number of Deaths"},
+      "x": {"field": "Death Cases in 2021", "type": "quantitative", "scale": {"domain": [0, 2020000]},"title": "Number of Deaths"},
       "color": {"value": "#c51b8a"}
     },
     "layer": [{
@@ -21,7 +21,7 @@
         "dx": 4
       },
       "encoding": {
-        "text": {"field": "Death cases in 2021", "type": "quantitative","format":".0f"},
+        "text": {"field": "Death Cases in 2021", "type": "quantitative","format":".0f"},
         "color": {"value": "black"}
         
       }
