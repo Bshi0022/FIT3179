@@ -1,19 +1,107 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "height": 400,
-    "width":400,
-    "title": "Top 10 deaths by cancer in the world",
-    "data": {
-      "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/FIT3179-HW10/Cancer%20death%20by%20types%20.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 400,
+  "width": 400,
+  "title": "Top 10 deaths by cancer in the world",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/FIT3179-HW10/Cancer%20death%20by%20types%20.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "CancerType_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Tracheal, bronchus,and lung",
+          "Colon and rectum",
+          "Stomach",
+          "Breast",
+          "Esophageal",
+          "Pancreatic",
+          "Liver",
+          "Prostate",
+          "Leukemia",
+          "Cervical",
+          "Non-Hodgkin lymphoma",
+          "Brain and central nervous system cancer",
+          "Bladder",
+          "Lip and oral cavity",
+          "Ovarian",
+          "Gallbladder and biliary tract",
+          "Kidney",
+          "Larynx",
+          "Multiple myeloma",
+          "Other pharynx",
+          "Uterine",
+          "Nasopharynx",
+          "Malignant skin melanoma",
+          "Non-melanoma skin cancer",
+          "Other cancers",
+          "Thyroid",
+          "Mesothelioma",
+          "Hodgkin lymphoma",
+          "Testicular"
+        ],
+        "labels": [
+          "Show All",
+          "Tracheal, bronchus,and lung",
+          "Colon and rectum",
+          "Stomach",
+          "Breast",
+          "Esophageal",
+          "Pancreatic",
+          "Liver",
+          "Prostate",
+          "Leukemia",
+          "Cervical",
+          "Non-Hodgkin lymphoma",
+          "Brain and central nervous system cancer",
+          "Bladder",
+          "Lip and oral cavity",
+          "Ovarian",
+          "Gallbladder and biliary tract",
+          "Kidney",
+          "Larynx",
+          "Multiple myeloma",
+          "Other pharynx",
+          "Uterine",
+          "Nasopharynx",
+          "Malignant skin melanoma",
+          "Non-melanoma skin cancer",
+          "Other cancers",
+          "Thyroid",
+          "Mesothelioma",
+          "Hodgkin lymphoma",
+          "Testicular"
+        ],
+        "name": "Cancer Type Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "CancerType_selection == null || datum['Cancer Type'] == CancerType_selection"}
+  ],
+  "encoding": {
+    "y": {"field": "Cancer Type", "type": "nominal", "title": "Type Of Cancer"},
+    "x": {
+      "field": "Death Cases in 2021",
+      "type": "quantitative",
+      "scale": {"domain": [0, 2020000]},
+      "title": "Number of Deaths"
     },
-    "encoding": {
-      "y": {"field": "Cancer Type", "type": "nominal","title": "Type Of Cancer"},
-      "x": {"field": "Death Cases in 2021", "type": "quantitative", "scale": {"domain": [0, 2020000]},"title": "Number of Deaths"},
-      "color": {"value": "#c51b8a"}
-    },
-    "layer": [{
+    "color": {"value": "#c51b8a"},
+    "tooltip": [
+      {"field": "Cancer Type", "type": "nominal", "title": "Type Of Cancer"},
+      {"field": "Death Cases in 2021", "type": "quantitative", "title": "Number of Deaths"}
+    ]
+  },
+  "layer": [
+    {
       "mark": "bar"
-    }, {
+    },
+    {
       "mark": {
         "type": "text",
         "align": "left",
@@ -21,9 +109,9 @@
         "dx": 4
       },
       "encoding": {
-        "text": {"field": "Death Cases in 2021", "type": "quantitative","format":".0f"},
+        "text": {"field": "Death Cases in 2021", "type": "quantitative", "format": ".0f"},
         "color": {"value": "black"}
-        
       }
-    }]
-  }
+    }
+  ]
+}
