@@ -4,11 +4,11 @@
     "width":400,
     "title": "Top 10 deaths by cancer in the world",
     "data": {
-      "url": "C:\Users\User\OneDrive - Monash University\Desktop\FIT3179-HW10\Cancer death by types .csv"
+      "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/FIT3179-HW10/Cancer%20death%20by%20types%20.csv"
     },
     "encoding": {
-      "y": {"field": "Cancer_Type", "type": "nominal","title": "Type Of Cancer"},
-      "x": {"field": "Death_cases_in_2021", "type": "quantitative", "scale": {"domain": [0, 2020000]},"title": "Number of Deaths"},
+      "y": {"field": "Cancer Type", "type": "nominal","title": "Type Of Cancer"},
+      "x": {"field": "Death cases in 2021", "type": "quantitative", "scale": {"domain": [0, 2020000]},"title": "Number of Deaths"},
       "color": {"value": "#c51b8a"}
     },
     "layer": [{
