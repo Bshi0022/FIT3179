@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height": 400,
+    "width":400,
+    "title": "Top 10 deaths by cancer in the world",
+    "data": {
+      "url": "C:\Users\User\OneDrive - Monash University\Desktop\FIT3179-HW10\Cancer death by types .csv"
+    },
+    "encoding": {
+      "y": {"field": "Cancer_Type", "type": "nominal","title": "Type Of Cancer"},
+      "x": {"field": "Death_cases_in_2021", "type": "quantitative", "scale": {"domain": [0, 2020000]},"title": "Number of Deaths"},
+      "color": {"value": "#c51b8a"}
+    },
+    "layer": [{
+      "mark": "bar"
+    }, {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 4
+      },
+      "encoding": {
+        "text": {"field": "Death cases in 2021", "type": "quantitative","format":".0f"},
+        "color": {"value": "black"}
+        
+      }
+    }]
+  }
