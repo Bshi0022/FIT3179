@@ -88,7 +88,7 @@
     "x": {
       "field": "Death Cases per 100,000",
       "type": "quantitative",
-      "scale": {"domain": [0, 2020000]},
+      "scale": {"domain": [0, 2020]},
       "title": "Number of Deaths"
     },
     "color": {"value": "#c51b8a"},
