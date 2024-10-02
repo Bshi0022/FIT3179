@@ -86,7 +86,7 @@
   "encoding": {
     "y": {"field": "Cancer Type", "type": "nominal", "title": "Type Of Cancer"},
     "x": {
-      "field": "Death Cases in 2021",
+      "field": "Death Cases per 100,000",
       "type": "quantitative",
       "scale": {"domain": [0, 2020000]},
       "title": "Number of Deaths"
@@ -94,7 +94,7 @@
     "color": {"value": "#c51b8a"},
     "tooltip": [
       {"field": "Cancer Type", "type": "nominal", "title": "Type Of Cancer"},
-      {"field": "Death Cases in 2021", "type": "quantitative", "title": "Number of Deaths"}
+      {"field": "Death Cases per 100,000", "type": "quantitative", "title": "Number of Deaths"}
     ]
   },
   "layer": [
@@ -109,7 +109,7 @@
         "dx": 4
       },
       "encoding": {
-        "text": {"field": "Death Cases in 2021", "type": "quantitative", "format": ".0f"},
+        "text": {"field": "Death Cases per 100,000", "type": "quantitative", "format": ".0f"},
         "color": {"value": "black"}
       }
     }
