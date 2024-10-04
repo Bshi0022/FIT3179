@@ -1,44 +1,69 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "path/to/your/cancer_data.csv", 
-      "format": {"type": "csv"}
-    },
-    "transform": [
-      {
-        "fold": ["Early stage (Stage 1)", "Late stage (Stage 4)"],
-        "as": ["Stage", "Survival"]
-      }
-    ],
-    "facet": {
-      "row": {
-        "field": "Cancer",
-        "type": "nominal",
-        "title": "Type of Cancer"
-      }
-    },
-    "mark": {
-      "type": "arc",
-      "innerRadius": 50 
-    },
-    "encoding": {
-      "theta": {
-        "field": "Survival",
-        "type": "quantitative",
-        "title": "Survival Rate (%)"
+    "title": "Survival Rates by Cancer Type",
+    "repeat": ["Early stage (Stage 1) Survival Rate", "Late stage (Stage 4) Survival Rate"],
+    "columns": 2,
+    "spec": {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/FIT3179%20-%20A2/Cancer%20-%20Survival%20Rate.csv", 
+        "format": {"type": "csv"}
       },
-      "color": {
-        "field": "Stage",
-        "type": "nominal",
-        "scale": {
-          "domain": ["Early stage (Stage 1)", "Late stage (Stage 4)"],
-          "range": ["#2c3e50", "#e74c3c"]
+      "transform": [
+        {
+          "fold": ["Early stage (Stage 1) Survival Rate", "Late stage (Stage 4) Survival Rate"],
+          "as": ["Stage", "Survival Rate"]
+        },
+        {
+                  "calculate": "replace(datum['Survival Rate'], '%', '')",
+                  "as": "Survival Rate Numeric"
+                },
+        {
+          "calculate": "parseFloat(datum['Survival Rate Numeric'])",
+          "as": "Survival Rate"
         }
-      },
-      "tooltip": [
-        {"field": "Stage", "title": "Stage"},
-        {"field": "Survival", "title": "Survival Rate (%)"}
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "arc",
+            "innerRadius": 50
+          },
+          "encoding": {
+            "theta": {
+              "field": "Survival Rate",
+              "type": "quantitative",
+              "title": "Survival Rate (%)"
+            },
+            "color": {
+              "field": "Stage",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Early stage (Stage 1) Survival Rate", "Late stage (Stage 4) Survival Rate"],
+                "range": ["#2c3e50", "#e74c3c"]
+              }
+            },
+            "tooltip": [
+              {"field": "Stage", "title": "Stage"},
+              {"field": "Survival Rate", "title": "Survival Rate (%)"}
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "middle",
+            "fontSize": 14
+          },
+          "encoding": {
+            "text": {
+              "field": "Stage",
+              "type": "nominal"
+            }
+          }
+        }
       ]
-    }
+    },
+    "config": {}
   }
   
