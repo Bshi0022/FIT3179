@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "path/to/your/cancer_data.csv", 
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {
+        "fold": ["Early stage (Stage 1)", "Late stage (Stage 4)"],
+        "as": ["Stage", "Survival"]
+      }
+    ],
+    "facet": {
+      "row": {
+        "field": "Cancer",
+        "type": "nominal",
+        "title": "Type of Cancer"
+      }
+    },
+    "mark": {
+      "type": "arc",
+      "innerRadius": 50 
+    },
+    "encoding": {
+      "theta": {
+        "field": "Survival",
+        "type": "quantitative",
+        "title": "Survival Rate (%)"
+      },
+      "color": {
+        "field": "Stage",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Early stage (Stage 1)", "Late stage (Stage 4)"],
+          "range": ["#2c3e50", "#e74c3c"]
+        }
+      },
+      "tooltip": [
+        {"field": "Stage", "title": "Stage"},
+        {"field": "Survival", "title": "Survival Rate (%)"}
+      ]
+    }
+  }
+  
