@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Data Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .chart {
+            margin: 0 auto;
+        }
+        h1, h2, p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cancer Data Visualization</h1>
+        <div class="section" id="map-section">
+            <h2>Cancer Incidence by Region</h2>
+            <div id="map" class="chart"></div>
+        </div>
+        <div class="section" id="bar-chart-section">
+            <h2>Cancer Types and Incidence Rates</h2>
+            <div id="bar-chart" class="chart"></div>
+        </div>
+        <div class="section" id="line-chart-section">
+            <h2>Cancer Trends Over Time</h2>
+            <div id="line-chart" class="chart"></div>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="path/to/your/data.js"></script>
+</body>
+</html>
