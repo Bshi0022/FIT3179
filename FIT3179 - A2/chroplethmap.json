@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Death Rate from Cancer (2010 to 2021)",
-  "width": 1000,
+  "width": 700,
   "height": 700,
   "params": [
     {
@@ -51,8 +51,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/FIT3179%20-%20A2/Cancer%20-%20Cases%20and%20number%20by%20gender.csv",
-        "format": {"type": "csv"}
+        "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/FIT3179%20-%20A2/Cancer%20-%20Death%20rate%202010%20to%202011.csv"
       },
       "transform": [
         {
@@ -60,19 +59,15 @@
           "from": {
             "data": {
               "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/homeworkweek9/ne_110m_admin_0_countries.topojson",
-              "format": { "type": "topojson", "feature": "ne_110m_admin_0_countries" }
+              "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
             },
-            "key": "properties.NAME",
-            "fields": ["properties.NAME"]
+            "key": "properties.NAME"
           },
           "as": "geo"
         },
         {
           "calculate": "datum['DR' + Year_selection]",
           "as": "Death_Rate"
-        },
-        {
-          "filter": "datum.Death_Rate != null"
         }
       ],
       "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
