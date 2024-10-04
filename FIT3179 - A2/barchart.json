@@ -10,7 +10,7 @@
       "anchor": "start"
     },
     "data": {
-      "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/FIT3179-HW10/Cancer%20death%20by%20types%20.csv",
+      "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/FIT3179%20-%20A2/Cancer%20death%20by%20types%20.csv",
       "format": {"type": "csv"}
     },
     "params": [
