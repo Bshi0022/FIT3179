@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Survival Rates by Cancer Type",
     "data": {
       "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/FIT3179%20-%20A2/Cancer%20-%20Survival%20Rate.csv",
       "format": {"type": "csv"}

@@ -2,13 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "height": 400,
     "width": 600,
-    "title": {
-      "text": "Deaths by Cancer Type in the World",
-      "fontSize": 24,
-      "font": "Verdana",
-      "color": "#2c3e50",
-      "anchor": "start"
-    },
     "data": {
       "url": "https://raw.githubusercontent.com/Bshi0022/FIT3179/refs/heads/main/FIT3179%20-%20A2/Cancer%20death%20by%20types%20.csv",
       "format": {"type": "csv"}
@@ -118,7 +111,7 @@
         }
       },
       "color": {
-        "value": "#417ebb"
+        "value": "#ee1818"
       },
       "tooltip": [
         {
@@ -150,7 +143,7 @@
           "font": "Verdana",
           "fontSize": 10,
           "fontWeight": "bold",
-          "color": "#2c3e50"
+          "color": "#502c2c"
         },
         "encoding": {
           "text": {

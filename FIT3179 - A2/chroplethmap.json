@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Death Rate from Cancer (2010 to 2021)",
   "width": 700,
-  "height": 700,
+  "height": 400,  
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  },
   "params": [
     {
       "name": "Year_selection",
@@ -85,6 +89,5 @@
         ]
       }
     }
-  ],
-  "config": {}
+  ]
 }
