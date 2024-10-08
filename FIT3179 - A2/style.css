@@ -1,121 +1,105 @@
-/* Base Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding-top: 50px; /* Space for the fixed header */
     text-align: center; /* Center align text */
-    background-color: #ffcccc; /* Very light red background */
+    background-color: white; /* Very light red background */
 }
 
-
-/* Header Styles */
 .header {
-  background-color: #004d61; /* Dark teal color */
-  color: white;
-  padding: 15px 0; /* Top and bottom padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff4d4d; /* Changed to a red color */
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 1000; /* Ensures the header is above other content */
 }
 
-.header nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center; /* Centered navigation */
-  padding: 0;
-  margin: 0;
+.nav-button {
+    margin: 0 50px; /* Increased margin for more spacing between buttons */
+    padding: 15px 25px; /* Increased padding for larger buttons */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 24px; /* Increased font size */
+    background-color: #cc0000; /* Darker shade of red for buttons */
 }
 
-.header nav ul li {
-  margin: 0 15px; /* Space between menu items */
+.nav-button:hover {
+    background-color: #e60000; /* Lighter shade on hover */
 }
 
-.header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500; /* Medium font weight */
+.page {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
 }
 
-/* Main Title Styles */
+.section-title {
+    font-size: 48px; /* Increased font size for section titles */
+    margin: 60px 0 20px; /* Spacing above and below section titles */
+    color: #cc0000; /* Match the color with the button */
+    font-weight: bold; /* Make it bold */
+    text-align: center; /* Center text */
+    width: 100%; /* Take full width */
+}
+
 .title {
-  text-align: center;
-  font-size: 48px;
-  margin: 30px 0; /* Adjusted for more space */
-  color: #004d61; /* Dark teal color */
-  letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-/* Subtitle Styles */
-.subtitle {
-  font-family: 'Roboto', sans-serif; /* Roboto font for subtitle */
-  font-size: 20px; /* Subtitle font size */
-  color: #333; /* Dark text color */
-  text-align: center; /* Centered subtitle */
-  margin: 20px 0; /* Top margin for spacing */
-}
-
-/* Section Styles */
-h2 {
-  font-size: 30px;
-  color: #004d61; /* Dark teal color */
-  margin: 20px 0 10px; /* Top margin for spacing */
-}
-
-h3 {
-  font-size: 25px; /* Sub-subtitle font size */
-  color: #004d61; /* Dark teal color */
-  margin: 15px 0 5px; /* Top margin for spacing */
-}
-
-p {
-  font-size: 18px;
-  color: #555; /* Slightly lighter text */
-  line-height: 1.6; /* Improved readability */
-  margin-bottom: 20px; /* Space between paragraphs */
-}
-
-/* Grid Layout */
-.pure-g {
-  margin-bottom: 30px; /* Space between sections */
-}
-
-/* Visualization Container */
 .vis-container {
-  width: 100%;
-  height: 450px; /* Standard height for all charts */
-  border: 1px solid #dcdcdc; /* Light border for definition */
-  border-radius: 10px; /* Rounded corners */
-  background-color: white; /* White background for contrast */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: all 0.3s ease; /* Smooth transition for hover */
+    margin: 20px 0;
+    display: flex;
+    justify-content: center; /* Center align each visualization */
+    max-width: 800px; /* Set a max-width for the charts */
+    width: 100%; /* Full width */
 }
 
-/* Hover Effect for Graphs */
-.vis-container:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-  transform: translateY(-3px); /* Slight lift on hover */
+.subtitle {
+    margin: 10px 0;
 }
 
-/* Footer Styles */
+/* New CSS for larger sub-subtitle */
+.subsubtitle {
+    font-size: 28px; /* Adjust this value to increase or decrease the size */
+    margin: 10px 0;
+    font-weight: bold; /* Optional: Make it bold */
+}
+
 .footer {
-  text-align: center; /* Centered footer text */
-  padding: 15px 0; /* Top and bottom padding */
-  background-color: #004d61; /* Dark teal color */
-  color: white;
+    background-color: #000000; /* Same color as the header */
+    color: white;
+    padding: 20px;
+    position: relative; /* Position relative for proper placement */
+    bottom: 0;
+    width: 100%;
+    text-align: center; /* Center text */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .title {
-      font-size: 36px; /* Smaller title on mobile */
-  }
+/* Responsive styles for small devices */
+@media (max-width: 600px) {
+    .nav-button {
+        padding: 10px 15px;
+        font-size: 20px; /* Adjusted font size for small screens */
+    }
 
-  h2 {
-      font-size: 26px; /* Smaller subtitles on mobile */
-  }
+    .header {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+    }
 
-  h3 {
-      font-size: 22px; /* Smaller sub-subtitles on mobile */
-  }
+    .section-title {
+        font-size: 36px; /* Adjusted font size for small screens */
+    }
 
-  p {
-      font-size: 16px; /* Smaller text on mobile */
-  }
+    .footer {
+        font-size: 16px; /* Adjusted font size for footer on small screens */
+    }
 }
