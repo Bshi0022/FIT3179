@@ -68,8 +68,8 @@ body {
     margin: 20px auto; /* Center align and add margin */
     text-align: center; /* Ensure text is center aligned */
     max-width: 600px; /* Set a maximum width for the text */
-    line-height: 1.5; /* Improve line spacing for readability */
-    font-size: 20px; /* Increase font size */
+    line-height: 1.5; 
+    font-size: 20px; 
 }
 
 /* New CSS for larger sub-subtitle */
