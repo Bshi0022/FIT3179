@@ -63,14 +63,18 @@ body {
     width: 100%; /* Full width */
 }
 
-.subtitle {
-    margin: 10px 0;
+.subtitle,
+.subsubtitle {
+    margin: 20px auto; /* Center align and add margin */
+    text-align: center; /* Ensure text is center aligned */
+    max-width: 600px; /* Set a maximum width for the text */
+    line-height: 1.5; /* Improve line spacing for readability */
+    font-size: 20px; /* Increase font size */
 }
 
 /* New CSS for larger sub-subtitle */
 .subsubtitle {
     font-size: 28px; /* Adjust this value to increase or decrease the size */
-    margin: 10px 0;
     font-weight: bold; /* Optional: Make it bold */
 }
 
