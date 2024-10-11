@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 700,
-  "height": 400,  
+  "height": 400,
   "config": {
     "view": {
       "stroke": "transparent"
@@ -80,7 +80,10 @@
         "color": {
           "field": "Death_Rate",
           "type": "quantitative",
-          "scale": {"scheme": "reds"},
+          "scale": {
+            "scheme": "reds",
+            "domain": [0, 250]  
+          },
           "legend": {"format": ".2f", "title": "Death Rate"}
         },
         "tooltip": [
